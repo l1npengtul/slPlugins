@@ -124,7 +124,7 @@ file (GLOB_RECURSE source_files CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/plugin/*.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/plugin/*.h)
 
-target_sources (${PLUGIN_NAME} PRIVATE ${source_files})
+target_sources (${PLUGIN_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/modules/bfxr/SfxrParams.cpp ${CMAKE_CURRENT_SOURCE_DIR}/modules/bfxr/Util.cpp  ${source_files})
 source_group (TREE ${CMAKE_CURRENT_SOURCE_DIR}/plugin PREFIX Source FILES ${source_files})
 
 file (GLOB_RECURSE asset_files CONFIGURE_DEPENDS
